@@ -39,9 +39,10 @@ namespace NetModular.Module.CodeGenerator.Infrastructure.Templates.Models
         {
             get
             {
-                var name = BaseEntityType.ToDescription();
-                if (name.Contains("Int")) return "int";
-                if (name.Contains("Long")) return "long";
+                var name = BaseEntityType.ToDescription().ToLower();
+                if (name.Contains("int")) return "int";
+                if (name.Contains("long")) return "long";
+                if (name.Contains("string")) return "string";
                 return "Guid";
             }
         }
