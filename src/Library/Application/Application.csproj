@@ -6,11 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Data.Query" Version="1.5.0" />
-    <PackageReference Include="NetModular.Lib.Mapper.AutoMapper" Version="1.5.0" />
   </ItemGroup>
   
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\NetModular\src\Framework\Data\Extend\Data.Query\Data.Query.csproj" />
+    <ProjectReference Include="..\..\..\..\NetModular\src\Framework\Mapper\Mapper.AutoMapper\Mapper.AutoMapper.csproj" />
+
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>

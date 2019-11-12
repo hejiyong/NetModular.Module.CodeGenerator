@@ -1,18 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetModular.Lib.Auth.Web" Version="1.5.0" />
-    <PackageReference Include="NetModular.Lib.Module.AspNetCore" Version="1.5.0" />
-    <PackageReference Include="NetModular.Lib.Utils.Mvc" Version="1.5.0" />
-    <PackageReference Include="NetModular.Lib.Validation.FluentValidation" Version="1.5.0" />
   </ItemGroup>
   
   <ItemGroup>
+    <ProjectReference Include="..\..\..\NetModular\src\Framework\Auth\Auth.Web\Auth.Web.csproj" />
+    <ProjectReference Include="..\..\..\NetModular\src\Framework\Module\Module.AspNetCore\Module.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\NetModular\src\Framework\Utils\Utils.Mvc\Utils.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\NetModular\src\Framework\Validation\Validation.FluentValidation\Validation.FluentValidation.csproj" />
+
+    
     <ProjectReference Include="..\Library\Application\Application.csproj" />
   </ItemGroup>
 
